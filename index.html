@@ -1,44 +1,683 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Glow & Care | Your Self-Care Starts Here</title>
-<meta name="description" content="Glow & Care is a beauty and self-care discovery space for little finds, thoughtful gifts and everyday moments that feel good.">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Glow & Care shares affordable beauty finds, body-care ideas, thoughtful gifts and simple self-care routines.">
+<meta name="theme-color" content="#fbf7f2">
+<title>Glow & Care | Affordable Beauty & Self-Care</title>
+
 <style>
-:root{--ink:#302a2e;--muted:#756b71;--cream:#fbf7f2;--rose:#f4e7eb;--pink:#b96f88;--deep:#7e465d;--line:#eadde2;--white:#fff}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,sans-serif;color:var(--ink);line-height:1.65;background:var(--white)}a{text-decoration:none;color:inherit}.nav{max-width:1120px;margin:auto;padding:18px 24px;display:flex;justify-content:space-between;align-items:center}.logo{font-size:1.35rem;font-weight:800;letter-spacing:-.4px}.logo span{color:var(--pink)}header{position:sticky;top:0;z-index:10;background:#fffdfdf2;border-bottom:1px solid var(--line);backdrop-filter:blur(8px)}nav{display:flex;gap:25px;color:var(--muted);font-size:.92rem}nav a:hover{color:var(--deep)}
-.hero{background:radial-gradient(circle at 85% 20%,#f7e8ed 0,transparent 32%),linear-gradient(135deg,#fffaf8,#fbf2f4 55%,#f8f1e8);padding:105px 24px 95px}.hero-inner{max-width:1120px;margin:auto}.eyebrow{text-transform:uppercase;letter-spacing:2.2px;font-size:.72rem;color:var(--deep);font-weight:800}.hero h1{font-family:Georgia,serif;font-weight:500;font-size:clamp(3rem,7vw,6.2rem);line-height:.98;letter-spacing:-3px;max-width:780px;margin:17px 0 24px}.hero p{max-width:610px;color:var(--muted);font-size:1.08rem;margin:0}.btn{display:inline-block;margin-top:28px;padding:14px 24px;border-radius:999px;background:var(--ink);color:#fff;font-weight:700}.btn:hover{background:var(--deep);transform:translateY(-1px)}
-section{padding:78px 24px}.container{max-width:1120px;margin:auto}.intro{text-align:center;max-width:760px;margin:auto}.intro h2,.section-head h2{font-family:Georgia,serif;font-weight:500;line-height:1.1}.intro h2{font-size:2.7rem;margin:10px 0 15px}.intro p{color:var(--muted);font-size:1.04rem}.edits{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:38px}.edit{padding:28px;border:1px solid var(--line);border-radius:24px;background:#fff;min-height:205px;transition:.2s}.edit:hover{transform:translateY(-4px);box-shadow:0 14px 30px #4b26310d}.edit .icon{font-size:1.7rem}.edit h3{margin:13px 0 6px;font-family:Georgia,serif;font-size:1.4rem;font-weight:500}.edit p{margin:0;color:var(--muted);font-size:.94rem}
-.little{background:var(--cream)}.section-head{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:30px}.section-head h2{margin:0;font-size:2.5rem}.section-head p{margin:0;color:var(--muted)}.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.card{background:#fff;border:1px solid var(--line);border-radius:20px;overflow:hidden;display:flex;flex-direction:column;transition:.2s}.card:hover{transform:translateY(-3px)}.product-art{height:175px;display:flex;align-items:center;justify-content:center;background:linear-gradient(145deg,#f5e7eb,#f8f0e8);font-size:3rem}.card-body{padding:18px;display:flex;flex-direction:column;flex:1}.tag{font-size:.68rem;text-transform:uppercase;letter-spacing:1.3px;color:var(--deep);font-weight:800}.card h3{font-size:1.02rem;margin:7px 0}.card p{font-size:.88rem;color:var(--muted);margin:0 0 16px}.shop{margin-top:auto;text-align:center;padding:10px;border-radius:10px;background:#f3e8ed;color:var(--deep);font-weight:700}.shop:hover{background:#ead8e0}
-.feature{background:#fff}.feature-box{background:linear-gradient(135deg,#f8e9ee,#fbf5ef);border-radius:28px;padding:55px;display:grid;grid-template-columns:1.1fr .9fr;gap:35px;align-items:center}.feature-box h2{font-family:Georgia,serif;font-size:2.7rem;font-weight:500;line-height:1.1;margin:8px 0 14px}.feature-box p{color:var(--muted);margin:0}.quote{font-family:Georgia,serif;font-size:1.35rem;line-height:1.35;padding:25px;border-left:2px solid var(--pink)}
-.about{background:#302a2e;color:#fff}.about-box{max-width:800px}.about-box p{color:#d9ced3}.about-box h2{font-family:Georgia,serif;font-weight:500;font-size:2.5rem;line-height:1.15;margin:10px 0 16px}.disclosure{font-size:.78rem;color:var(--muted);padding:20px 24px;border-top:1px solid var(--line);background:#fff}footer{padding:32px 24px;text-align:center;color:var(--muted);font-size:.82rem}
-@media(max-width:850px){.grid{grid-template-columns:repeat(2,1fr)}.edits{grid-template-columns:repeat(2,1fr)}.feature-box{grid-template-columns:1fr}}@media(max-width:650px){nav{display:none}.grid,.edits{grid-template-columns:1fr}.hero{padding-top:70px}.hero h1{letter-spacing:-2px}.section-head{display:block}.section-head p{margin-top:8px}.feature-box{padding:32px}.intro h2,.feature-box h2,.about-box h2{font-size:2.15rem}section{padding:60px 18px}}
-</style></head>
+:root {
+  --ink: #302a2e;
+  --muted: #756b71;
+  --cream: #fbf7f2;
+  --rose: #f4e7eb;
+  --pink: #b96f88;
+  --deep: #7e465d;
+  --line: #eadde2;
+  --white: #ffffff;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: var(--ink);
+  line-height: 1.7;
+  background: var(--white);
+}
+
+a { color: inherit; }
+
+a:focus-visible {
+  outline: 3px solid var(--pink);
+  outline-offset: 4px;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: #fffdfdf5;
+  border-bottom: 1px solid var(--line);
+}
+
+.nav {
+  max-width: 1120px;
+  margin: auto;
+  padding: 16px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.logo {
+  font-size: 1.35rem;
+  font-weight: 800;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.logo span { color: var(--pink); }
+
+nav {
+  display: flex;
+  gap: 22px;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: var(--muted);
+  font-size: .9rem;
+  text-decoration: none;
+}
+
+nav a:hover { color: var(--deep); }
+
+.hero {
+  background:
+    radial-gradient(circle at 85% 20%, #f7e8ed 0, transparent 32%),
+    linear-gradient(135deg, #fffaf8, #fbf2f4 55%, #f8f1e8);
+  padding: 100px 24px 90px;
+}
+
+.container, .hero-inner {
+  max-width: 1120px;
+  margin: auto;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: .72rem;
+  color: var(--deep);
+  font-weight: 800;
+}
+
+.hero h1 {
+  font-family: Georgia, serif;
+  font-weight: 500;
+  font-size: clamp(3rem, 7vw, 5.8rem);
+  line-height: 1.03;
+  letter-spacing: -2px;
+  max-width: 790px;
+  margin: 18px 0 24px;
+}
+
+.hero p {
+  max-width: 630px;
+  color: var(--muted);
+  font-size: 1.08rem;
+  margin: 0;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 26px;
+  padding: 13px 23px;
+  border-radius: 999px;
+  background: var(--ink);
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.btn:hover { background: var(--deep); }
+
+section { padding: 72px 24px; }
+
+.intro {
+  max-width: 760px;
+  margin: auto;
+  text-align: center;
+}
+
+.intro h2, .section-head h2, .feature-box h2,
+.about-box h2, .guide h3 {
+  font-family: Georgia, serif;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.intro h2 {
+  font-size: 2.6rem;
+  margin: 12px 0;
+}
+
+.intro p { color: var(--muted); }
+
+.little { background: var(--cream); }
+
+.section-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.section-head h2 {
+  font-size: 2.5rem;
+  margin: 6px 0 0;
+}
+
+.section-head p {
+  color: var(--muted);
+  margin: 0;
+}
+
+.edits {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-top: 36px;
+}
+
+.edit {
+  display: block;
+  padding: 25px;
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  background: var(--white);
+  text-decoration: none;
+  transition: transform .2s;
+}
+
+.edit:hover { transform: translateY(-3px); }
+
+.edit .icon { font-size: 1.7rem; }
+
+.edit h3 {
+  font-family: Georgia, serif;
+  font-weight: 500;
+  font-size: 1.35rem;
+  margin: 10px 0 5px;
+}
+
+.edit p {
+  color: var(--muted);
+  font-size: .94rem;
+  margin: 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+}
+
+.product-art {
+  min-height: 155px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(145deg, #f5e7eb, #f8f0e8);
+  font-size: 3rem;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex: 1;
+  padding: 18px;
+}
+
+.tag {
+  font-size: .68rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--deep);
+  font-weight: 800;
+}
+
+.card h3 { font-size: 1rem; margin: 8px 0; }
+
+.card p {
+  font-size: .88rem;
+  color: var(--muted);
+  margin: 0 0 18px;
+}
+
+.shop {
+  display: inline-block;
+  margin-top: auto;
+  padding: 8px 12px;
+  background: var(--rose);
+  color: var(--deep);
+  border-radius: 9px;
+  font-size: .86rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.shop:hover { background: #ead8e0; }
+
+.guides { background: var(--white); }
+
+.guide-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.guide {
+  padding: 26px;
+  border-radius: 20px;
+  border: 1px solid var(--line);
+  background: #fffdfc;
+  scroll-margin-top: 100px;
+}
+
+.guide h3 {
+  font-size: 1.45rem;
+  margin: 10px 0;
+}
+
+.guide p, .guide li { color: var(--muted); }
+
+.guide ul { padding-left: 20px; }
+
+.feature { background: var(--white); }
+
+.feature-box {
+  background: linear-gradient(135deg, #f8e9ee, #fbf5ef);
+  border-radius: 26px;
+  padding: 48px;
+  display: grid;
+  grid-template-columns: 1.1fr .9fr;
+  gap: 32px;
+  align-items: center;
+}
+
+.feature-box h2 {
+  font-size: 2.5rem;
+  margin: 10px 0;
+}
+
+.feature-box p { color: var(--muted); }
+
+.quote {
+  font-family: Georgia, serif;
+  font-size: 1.4rem;
+  line-height: 1.45;
+  padding: 20px;
+  border-left: 2px solid var(--pink);
+}
+
+.about { background: var(--ink); color: var(--white); }
+
+.about-box { max-width: 800px; }
+
+.about-box h2 {
+  font-size: 2.5rem;
+  margin: 10px 0;
+}
+
+.about-box p { color: #ded2d7; }
+
+.disclosure {
+  padding: 22px 24px;
+  font-size: .82rem;
+  color: var(--muted);
+  background: var(--white);
+  border-top: 1px solid var(--line);
+}
+
+footer {
+  text-align: center;
+  padding: 26px 20px;
+  color: var(--muted);
+  font-size: .82rem;
+}
+
+@media (max-width: 850px) {
+  .grid { grid-template-columns: repeat(2, 1fr); }
+  .edits, .guide-list { grid-template-columns: repeat(2, 1fr); }
+  .feature-box { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 600px) {
+  .nav { align-items: flex-start; flex-direction: column; gap: 10px; }
+  nav { gap: 12px; }
+  nav a { font-size: .82rem; }
+  .hero { padding: 65px 20px; }
+  section { padding: 52px 18px; }
+  .grid, .edits, .guide-list { grid-template-columns: 1fr; }
+  .section-head { display: block; }
+  .section-head p { margin-top: 8px; }
+  .intro h2, .feature-box h2, .about-box h2 { font-size: 2.1rem; }
+  .feature-box { padding: 28px; }
+}
+</style>
+</head>
+
 <body>
-<header><div class="nav"><a class="logo" href="#">Glow <span>&</span> Care</a><nav><a href="#edits">Self-Care Edits</a><a href="#finds">Little Finds</a><a href="#about">About</a></nav></div></header>
+<header>
+  <div class="nav">
+    <a class="logo" href="#home">Glow <span>&amp;</span> Care</a>
+    <nav aria-label="Main navigation">
+      <a href="#edits">Self-Care</a>
+      <a href="#finds">Beauty Finds</a>
+      <a href="#guides">Simple Guides</a>
+      <a href="#about">About</a>
+    </nav>
+  </div>
+</header>
+
 <main>
-<section class="hero"><div class="hero-inner"><div class="eyebrow">A little space for you</div><h1>Your self-care starts here.</h1><p>Slow down. Take a breath. Make a little time for yourself — and discover the beauty finds that make ordinary moments feel a little more special.</p><a class="btn" href="#edits">Explore the Self-Care Edits</a></div></section>
-<section><div class="container intro"><div class="eyebrow">A gentle reminder</div><h2>Because you don't always need a reason.</h2><p>Sometimes you buy something because it makes an ordinary day feel a little nicer. A small treat, a fresh start, a gift for someone you love — or simply something that says, <em>I deserve this.</em></p></div></section>
-<section id="edits" class="little"><div class="container"><div class="section-head"><div><div class="eyebrow">Choose your moment</div><h2>The Self-Care Edits</h2></div><p>Little collections for different kinds of days.</p></div><div class="edits">
-<a class="edit" href="#finds"><div class="icon">🌿</div><h3>Sunday Reset</h3><p>A little preparation for a calmer, fresher week.</p></a>
-<a class="edit" href="#finds"><div class="icon">💗</div><h3>I Deserve This</h3><p>No special occasion. No explanation needed.</p></a>
-<a class="edit" href="#finds"><div class="icon">🎁</div><h3>Gift Ideas</h3><p>For someone special — including yourself.</p></a>
-<a class="edit" href="#finds"><div class="icon">🌙</div><h3>Wind Down</h3><p>Small things for a softer end to the day.</p></a>
-<a class="edit" href="#finds"><div class="icon">☀️</div><h3>Slow Morning</h3><p>Start your day without rushing through it.</p></a>
-<a class="edit" href="#finds"><div class="icon">✨</div><h3>Little Luxuries</h3><p>Small pleasures that make everyday life feel special.</p></a>
-</div></div></section>
-<section id="finds"><div class="container"><div class="section-head"><div><div class="eyebrow">Worth a little look</div><h2>Little Finds</h2></div><p>Beauty discoveries chosen for the moments they belong to.</p></div><div class="grid">
-<article class="card"><div class="product-art">🫧</div><div class="card-body"><div class="tag">Sunday Reset</div><h3>Gentle Daily Cleanser</h3><p>A simple little reset for a fresh-feeling routine.</p><a class="shop" href="#" onclick="demo(event)">Take a Look</a></div></article>
-<article class="card"><div class="product-art">✨</div><div class="card-body"><div class="tag">I Deserve This</div><h3>Daily Moisturiser</h3><p>An everyday beauty staple that can make a routine feel nicer.</p><a class="shop" href="#" onclick="demo(event)">Take a Look</a></div></article>
-<article class="card"><div class="product-art">💧</div><div class="card-body"><div class="tag">Wind Down</div><h3>Hydrating Serum</h3><p>A little skincare moment for when you want to slow down.</p><a class="shop" href="#" onclick="demo(event)">Take a Look</a></div></article>
-<article class="card"><div class="product-art">💋</div><div class="card-body"><div class="tag">Gift Ideas</div><h3>Everyday Lip Balm</h3><p>Small, useful and easy to tuck into a thoughtful gift.</p><a class="shop" href="#" onclick="demo(event)">Take a Look</a></div></article>
-<article class="card"><div class="product-art">🧖</div><div class="card-body"><div class="tag">Sunday Reset</div><h3>Repair Hair Mask</h3><p>A feel-good pick for your next at-home self-care moment.</p><a class="shop" href="#" onclick="demo(event)">Take a Look</a></div></article>
-<article class="card"><div class="product-art">🧴</div><div class="card-body"><div class="tag">Slow Morning</div><h3>Daily Shampoo</h3><p>An everyday staple for a simple, unhurried routine.</p><a class="shop" href="#" onclick="demo(event)">Take a Look</a></div></article>
-<article class="card"><div class="product-art">🌿</div><div class="card-body"><div class="tag">Little Luxuries</div><h3>Body Lotion</h3><p>A small body-care treat for making everyday routines feel special.</p><a class="shop" href="#" onclick="demo(event)">Take a Look</a></div></article>
-<article class="card"><div class="product-art">🛁</div><div class="card-body"><div class="tag">Wind Down</div><h3>Gentle Body Wash</h3><p>A fresh little addition to a slower end-of-day routine.</p><a class="shop" href="#" onclick="demo(event)">Take a Look</a></div></article>
-</div></div></section>
-<section class="feature"><div class="container feature-box"><div><div class="eyebrow">Your reminder</div><h2>You are allowed to make ordinary days feel special.</h2><p>Self-care doesn't have to be complicated. Sometimes it's simply choosing one small thing that makes you feel good.</p></div><div class="quote">“There is no rule that says you can't be on your own gift list.”</div></div></section>
-<section id="about" class="about"><div class="container about-box"><div class="eyebrow">About Glow & Care</div><h2>Beauty finds, with a little more feeling.</h2><p>Glow & Care is a small independent beauty-discovery space built around the moments behind the products — the Sunday reset, the little gift, the quiet wind-down, and the simple feeling of treating yourself well.</p></div></section>
-<div class="disclosure"><div class="container"><strong>Affiliate disclosure:</strong> Some links on this website may become affiliate links. If you purchase through an affiliate link, Glow & Care may earn a commission at no extra cost to you. Affiliate links will be added only after appropriate affiliate-program approval.</div></div>
-</main><footer>© 2026 Glow & Care · A small independent beauty & self-care project.</footer>
-<script>function demo(e){e.preventDefault();alert('This is a demo link for now. Once the relevant affiliate links are added, this button will take you to the product retailer.');}</script>
-</body></html>
+<section class="hero" id="home">
+  <div class="hero-inner">
+    <div class="eyebrow">A little space for you</div>
+    <h1>Your self-care starts here.</h1>
+    <p>
+      Affordable beauty, body-care discoveries and simple ways to make
+      everyday moments feel a little more special. Because looking after
+      yourself doesn't have to cost a lot.
+    </p>
+    <a class="btn" href="#finds">Explore Little Finds</a>
+  </div>
+</section>
+
+<section>
+  <div class="container intro">
+    <div class="eyebrow">A gentle reminder</div>
+    <h2>You don't need a special occasion.</h2>
+    <p>
+      Sometimes it's a refreshing shower, a little time to unwind or
+      finding an everyday product that suits your needs and budget.
+      Self-care can be simple, personal and affordable.
+    </p>
+  </div>
+</section>
+
+<section class="little" id="edits">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">Choose your moment</div>
+        <h2>The Self-Care Edits</h2>
+      </div>
+      <p>Little ideas for different kinds of days.</p>
+    </div>
+
+    <div class="edits">
+      <a class="edit" href="#sunday">
+        <div class="icon">🌿</div>
+        <h3>Sunday Reset</h3>
+        <p>Small rituals to help you prepare for a new week.</p>
+      </a>
+      <a class="edit" href="#finds">
+        <div class="icon">💗</div>
+        <h3>I Deserve This</h3>
+        <p>Everyday treats that fit your needs and budget.</p>
+      </a>
+      <a class="edit" href="#gifts">
+        <div class="icon">🎁</div>
+        <h3>Gift Ideas</h3>
+        <p>Thoughtful little gifts for someone special.</p>
+      </a>
+      <a class="edit" href="#bodycare">
+        <div class="icon">🛁</div>
+        <h3>Body-Care Moments</h3>
+        <p>Simple ways to make daily routines feel nicer.</p>
+      </a>
+      <a class="edit" href="#morning">
+        <div class="icon">☀️</div>
+        <h3>Slow Morning</h3>
+        <p>Easy habits to start the day at your own pace.</p>
+      </a>
+      <a class="edit" href="#winddown">
+        <div class="icon">🌙</div>
+        <h3>Wind Down</h3>
+        <p>Make a little room for a calmer evening.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="finds">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">Affordable ideas</div>
+        <h2>Little Finds</h2>
+      </div>
+      <p>Everyday beauty and body-care essentials to explore.</p>
+    </div>
+
+    <div class="grid">
+      <article class="card">
+        <div class="product-art" aria-hidden="true">🫧</div>
+        <div class="card-body">
+          <div class="tag">Skincare</div>
+          <h3>Gentle Daily Cleanser</h3>
+          <p>Look for a cleanser suited to your skin and everyday routine.</p>
+          <a class="shop" href="#skincare">Read our tips</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="product-art" aria-hidden="true">✨</div>
+        <div class="card-body">
+          <div class="tag">Skincare</div>
+          <h3>Everyday Moisturiser</h3>
+          <p>Explore simple moisturisers that fit your skin's needs.</p>
+          <a class="shop" href="#skincare">Read our tips</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="product-art" aria-hidden="true">💧</div>
+        <div class="card-body">
+          <div class="tag">Skincare</div>
+          <h3>Hydrating Serum</h3>
+          <p>An optional extra for a routine that suits your preferences.</p>
+          <a class="shop" href="#skincare">Read our tips</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="product-art" aria-hidden="true">💋</div>
+        <div class="card-body">
+          <div class="tag">Little Treats</div>
+          <h3>Everyday Lip Balm</h3>
+          <p>A handy everyday essential or a small addition to a gift.</p>
+          <a class="shop" href="#gifts">Explore gift ideas</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="product-art" aria-hidden="true">🧴</div>
+        <div class="card-body">
+          <div class="tag">Hair Care</div>
+          <h3>Everyday Shampoo</h3>
+          <p>Choose a formula that suits your scalp, hair and budget.</p>
+          <a class="shop" href="#bodycare">Read our tips</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="product-art" aria-hidden="true">🧖</div>
+        <div class="card-body">
+          <div class="tag">Hair Care</div>
+          <h3>Hair Treatment</h3>
+          <p>A conditioning treatment to consider if your hair needs it.</p>
+          <a class="shop" href="#bodycare">Read our tips</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="product-art" aria-hidden="true">🌿</div>
+        <div class="card-body">
+          <div class="tag">Body Care</div>
+          <h3>Body Lotion</h3>
+          <p>Explore everyday moisturisers in sizes and prices that suit you.</p>
+          <a class="shop" href="#bodycare">Read our tips</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="product-art" aria-hidden="true">🚿</div>
+        <div class="card-body">
+          <div class="tag">Body Care</div>
+          <h3>Gentle Body Wash</h3>
+          <p>A simple daily essential that doesn't need to be expensive.</p>
+          <a class="shop" href="#bodycare">Read our tips</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="guides little" id="guides">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">A little help along the way</div>
+        <h2>Simple Self-Care Guides</h2>
+      </div>
+    </div>
+
+    <div class="guide-list">
+      <article class="guide" id="skincare">
+        <div class="eyebrow">Beauty on a budget</div>
+        <h3>A Simpler Skincare Routine</h3>
+        <p>You don't need a shelf full of products to get started. Keep your routine manageable and choose products for your own needs.</p>
+        <ul>
+          <li>Start with a gentle cleanser if you need one.</li>
+          <li>Choose a moisturiser that feels comfortable on your skin.</li>
+          <li>Use broad-spectrum sunscreen during the day.</li>
+          <li>Add other products only if you have a reason to use them.</li>
+        </ul>
+      </article>
+
+      <article class="guide" id="bodycare">
+        <div class="eyebrow">Everyday essentials</div>
+        <h3>Make Body Care Simple</h3>
+        <p>Small routines can be enjoyable without turning into a long shopping list.</p>
+        <ul>
+          <li>Choose a body wash you enjoy using.</li>
+          <li>Consider moisturiser when your skin feels dry.</li>
+          <li>Pick shampoo and conditioner for your hair's needs.</li>
+          <li>Use what works for you before buying something new.</li>
+        </ul>
+      </article>
+
+      <article class="guide" id="gifts">
+        <div class="eyebrow">Thoughtful little things</div>
+        <h3>Beauty Gifts on a Budget</h3>
+        <p>A thoughtful gift is about the person receiving it, not the price tag.</p>
+        <ul>
+          <li>Put together a small hand-care gift.</li>
+          <li>Pair a lip balm with a handwritten note.</li>
+          <li>Choose a body-care item in a scent they enjoy.</li>
+          <li>Check allergies and preferences before buying skincare.</li>
+        </ul>
+      </article>
+
+      <article class="guide" id="sunday">
+        <div class="eyebrow">A fresh start</div>
+        <h3>Your Sunday Reset</h3>
+        <p>Make a little space for yourself before another busy week begins.</p>
+        <ul>
+          <li>Tidy one small area of your space.</li>
+          <li>Prepare a few things for the coming week.</li>
+          <li>Enjoy a shower or a simple skincare routine.</li>
+          <li>Leave some time for an activity you enjoy.</li>
+        </ul>
+      </article>
+
+      <article class="guide" id="morning">
+        <div class="eyebrow">Take it slowly</div>
+        <h3>A Gentle Morning</h3>
+        <p>Your morning routine doesn't have to be complicated or expensive.</p>
+        <ul>
+          <li>Give yourself time to wake up.</li>
+          <li>Drink some water and eat when you're hungry.</li>
+          <li>Keep your skincare simple.</li>
+          <li>Choose one manageable priority for the day.</li>
+        </ul>
+      </article>
+
+      <article class="guide" id="winddown">
+        <div class="eyebrow">A softer evening</div>
+        <h3>Time to Wind Down</h3>
+        <p>Create a small evening ritual that helps you transition away from a busy day.</p>
+        <ul>
+          <li>Set aside a few minutes without distractions.</li>
+          <li>Use your usual skincare or body-care products.</li>
+          <li>Read, listen to music or enjoy a quiet activity.</li>
+          <li>Give yourself time for a regular sleep routine.</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="feature">
+  <div class="container feature-box">
+    <div>
+      <div class="eyebrow">Your reminder</div>
+      <h2>You can make ordinary days feel special.</h2>
+      <p>
+        Self-care doesn't have to be complicated or costly.
+        Sometimes it's a simple routine, a little rest or a small
+        thing that makes your day feel more like your own.
+      </p>
+    </div>
+    <div class="quote">
+      “There is no rule that says you can't be on your own gift list.”
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="container about-box">
+    <div class="eyebrow">About Glow &amp; Care</div>
+    <h2>Beauty finds, with a little more feeling.</h2>
+    <p>
+      Glow &amp; Care is an independent beauty and self-care discovery
+      project for people who enjoy the little things. We share ideas
+      for affordable beauty, everyday body care, thoughtful gifts
+      and simple routines that make ordinary moments feel special.
+    </p>
+    <p>
+      Our approach is simple: thoughtful choices over unnecessary
+      spending, and useful ideas over pressure to buy more.
+    </p>
+  </div>
+</section>
+
+<div class="disclosure">
+  <div class="container">
+    <strong>Affiliate disclosure:</strong>
+    Glow &amp; Care may earn a commission from qualifying purchases
+    made through approved affiliate links, at no additional cost to
+    you. We will identify affiliate links where they appear.
+    Product recommendations and retailer links will be added as
+    partnerships become available.
+  </div>
+</div>
+</main>
+
+<footer>
+  © 2026 Glow &amp; Care · Affordable beauty, body care &amp; self-care.
+</footer>
+</body>
+</html>
